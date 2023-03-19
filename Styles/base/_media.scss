@@ -1,0 +1,18 @@
+// ================= MEDIA ================= //
+$breakpoints: (
+    mobile: 375px,
+    desktop: 1440px
+);
+// ========================================= //
+
+@mixin mobile {
+    @media screen and (max-width: map-get($breakpoints, mobile)) and (orientation: portrait) and (orientation: landscape) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media screen and (min-width: map-get($breakpoints, desktop)) {
+        @content;
+    }
+}
