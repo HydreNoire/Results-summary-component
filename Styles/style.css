@@ -223,6 +223,9 @@ body ul li {
   padding: 0.25rem 1rem;
   border-radius: 1rem;
 }
+body ul li .score__by {
+  animation: appearing 1s linear 1;
+}
 body ul li p:last-child {
   color: black;
   font-family: "Hank Bold";
@@ -299,6 +302,7 @@ body button {
   opacity: 0.5;
 }
 #scoring .quote {
+  opacity: 0;
   width: 70%;
   margin-bottom: 1.5rem;
 }
@@ -333,7 +337,7 @@ body button {
   align-items: center;
   justify-content: space-between;
 }
-#summary .title__svg svg {
+#summary .title__svg img {
   margin-right: 0.5rem;
 }
 
@@ -385,5 +389,13 @@ body button {
   #summary {
     width: 50%;
     padding: 1rem 1.5rem;
+  }
+}
+@keyframes appearing {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }/*# sourceMappingURL=style.css.map */

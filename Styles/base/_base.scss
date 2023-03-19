@@ -36,6 +36,10 @@ body {
             margin: 1.5rem 0;
             padding: 0.25rem 1rem;
             border-radius: 1rem;
+            
+            .score__by {
+                animation: appearing 1s linear 1;
+            }
 
             p {
                 &:last-child {
@@ -129,6 +133,7 @@ body {
     }
 
     .quote {
+        opacity: 0;
         width: 70%;
         margin-bottom: 1.5rem;
 
@@ -146,7 +151,6 @@ body {
         }
 
     }
-
 }
 
 #summary {
@@ -169,7 +173,7 @@ body {
         align-items: center;
         justify-content: space-between;
 
-        svg {
+        img {
             margin-right: .5rem;
         }
     }
@@ -243,4 +247,10 @@ body {
         width: 50%;
         padding: 1rem 1.5rem;
     }
+}
+
+// ===== ANIMATION ===== //
+@keyframes appearing {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
 }
